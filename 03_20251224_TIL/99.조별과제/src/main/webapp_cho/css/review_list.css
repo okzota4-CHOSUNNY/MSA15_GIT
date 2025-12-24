@@ -1,0 +1,248 @@
+/* 리뷰 리스트 전용 변수 */
+:root {
+    --container-bg: #ffffff;
+    --primary-text: #333333;
+    --secondary-text: #666666;
+    --accent-color: #f0f0f0;
+    --active-tab-border: #333333;
+    --btn-bg-gray: #7a7a7a;
+    --btn-text-white: #ffffff;
+    --btn-bg-light: #f5f1f1;
+    --btn-text-gray: #a39e9e;
+}
+
+/* 전체 컨테이너: 회원가입 폼과 통일감을 위해 중앙 정렬 및 너비 제한 */
+.review-list-container {
+    background-color: var(--container-bg);
+    width: 100%;
+    max-width: 500px;
+    /* 회원가입 폼(500px)과 동일하게 맞춰 시각적 통일감 부여 */
+    margin: 0 auto;
+    min-height: 100vh;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+}
+
+/* 상단 메인 탭 */
+.main-tabs {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px 10px;
+    background-color: #fafafa;
+}
+
+.tab-item {
+    font-size: 22px;
+    font-weight: 700;
+    color: #000;
+    cursor: pointer;
+    padding-bottom: 5px;
+    border-bottom: 3px solid transparent;
+    transition: border-bottom 0.2s;
+}
+
+.tab-item:hover {
+    border-bottom: 3px solid #ddd;
+}
+
+.tab-item.active {
+    border-bottom: 3px solid var(--active-tab-border);
+}
+
+.tab-item.active:hover {
+    border-bottom: 3px solid var(--active-tab-border);
+}
+
+/* 서브 리뷰 탭 (방문자/인스타그램) */
+.review-type-tabs {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    padding: 20px;
+}
+
+.type-btn {
+    padding: 10px 25px;
+    border-radius: 8px;
+    font-size: 18px;
+    font-weight: 700;
+    border: none;
+    cursor: pointer;
+}
+
+.type-btn.visitor {
+    background-color: var(--btn-bg-gray);
+    color: var(--btn-text-white);
+}
+
+.type-btn.instagram {
+    background-color: var(--btn-bg-light);
+    color: var(--btn-text-gray);
+}
+
+/* 필터 및 정보 바 */
+.filter-section {
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.designer-select {
+    width: 100%;
+    padding: 12px;
+    border: 1.5px solid #ddd;
+    border-radius: 8px;
+    font-size: 16px;
+    text-align: center;
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%23888' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 15px center;
+}
+
+.receipt-info {
+    width: 100%;
+    padding: 10px;
+    border: 1.5px solid #ddd;
+    border-radius: 8px;
+    font-size: 14px;
+    color: #555;
+    text-align: center;
+    background-color: #fff;
+}
+
+/* 리뷰 리스트 */
+.review-items {
+    padding: 20px 0;
+}
+
+.review-card {
+    padding: 20px;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.review-card.hidden {
+    display: none;
+}
+
+.user-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.user-avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 18px;
+    background-color: #f0e6e0;
+    margin-right: 12px;
+}
+
+.user-meta {
+    display: flex;
+    flex-direction: column;
+}
+
+.uid {
+    font-weight: 700;
+    font-size: 15px;
+}
+
+.handle {
+    color: #888;
+    font-size: 13px;
+}
+
+.review-content {
+    display: flex;
+    gap: 15px;
+}
+
+.review-img-placeholder {
+    width: 140px;
+    height: 180px;
+    border-radius: 12px;
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #999;
+    font-size: 14px;
+    font-weight: 600;
+    flex-shrink: 0;
+}
+
+.review-body {
+    flex-grow: 1;
+}
+
+.designer-name {
+    font-size: 17px;
+    font-weight: 800;
+    margin-bottom: 10px;
+}
+
+.review-text {
+    font-size: 13px;
+    line-height: 1.6;
+    color: #333;
+    margin-bottom: 15px;
+    display: -webkit-box;
+    -webkit-line-clamp: 6;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.card-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.help-btn {
+    font-size: 12px;
+    color: #555;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    cursor: pointer;
+    padding: 2px 5px;
+    border-radius: 4px;
+    transition: all 0.2s;
+}
+
+.help-btn.active {
+    color: #007bff;
+    font-weight: 700;
+}
+
+.help-btn .count {
+    font-weight: 700;
+}
+
+.date {
+    font-size: 12px;
+    color: #aaa;
+}
+
+/* 더보기 버튼 */
+.more-btn-container {
+    padding: 20px;
+}
+
+.load-more-btn {
+    width: 100%;
+    padding: 12px;
+    border: 1.5px solid #ddd;
+    border-radius: 8px;
+    background: #fff;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}

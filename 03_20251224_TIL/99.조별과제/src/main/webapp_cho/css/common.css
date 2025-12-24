@@ -1,0 +1,149 @@
+/* common.css - 공통 헤더 및 푸터 스타일 */
+
+/* 글로벌 레이아웃 설정 */
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: #f5f6f7;
+}
+
+main {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    /* 세로로도 꽉 차지 않게 상단부터 배치 */
+    padding: 40px 20px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.signup-main {
+    align-items: center;
+    /* 회원가입 등 특정 페이지는 중앙 배치 */
+}
+
+/* 헤더 스타일 */
+.site-header {
+    width: 100%;
+    height: 70px;
+    background-color: #fff;
+    border-bottom: 1px solid #eee;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    padding: 0 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.header-container {
+    width: 100%;
+    max-width: 1000px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo-area {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    text-decoration: none;
+    color: #333;
+}
+
+.logo-icon {
+    font-size: 24px;
+    margin-right: 10px;
+}
+
+.site-title {
+    font-size: 20px;
+    font-weight: 800;
+    letter-spacing: -0.5px;
+}
+
+.user-menu {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.login-link {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #555;
+    font-size: 15px;
+    font-weight: 600;
+    transition: color 0.2s;
+}
+
+.login-link:hover {
+    color: #000;
+}
+
+.menu-divider {
+    font-size: 12px;
+    color: #ccc;
+    margin: 0 -5px;
+    /* Divider와 텍스트 사이 간격 미세 조정 */
+}
+
+.login-icon {
+    font-size: 20px;
+    margin-right: 5px;
+}
+
+/* 푸터 스타일 */
+.site-footer {
+    width: 100%;
+    background-color: #f9f9f9;
+    padding: 50px 20px;
+    border-top: 1px solid #eee;
+    color: #777;
+    margin-top: 50px;
+}
+
+.footer-container {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.footer-info {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px 30px;
+    font-size: 13px;
+    line-height: 1.6;
+}
+
+.info-item {
+    display: flex;
+}
+
+.info-label {
+    font-weight: 700;
+    margin-right: 8px;
+    color: #555;
+}
+
+.footer-bottom {
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid #eee;
+    font-size: 12px;
+    color: #aaa;
+    display: flex;
+    justify-content: space-between;
+}
+
+.copyright {
+    margin-bottom: 0;
+}
