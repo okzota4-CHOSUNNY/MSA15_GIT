@@ -1,0 +1,29 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>/model/person</title>
+</head>
+<body>
+	<h1>이름 : <th:block th:text="${person.name}"></th:block></h1>
+	<h1>나이 : <th:block th:text="${person.age}"></th:block></h1>
+
+	<hr>
+	
+	<form action="/model/person" method="POST">
+		<input type="text" name="name" th:value="${person.name}" /> <br>
+		<input type="text" name="age" th:value="${person.age}" />  <br>
+		<input type="submit" value="등록" /> 
+	</form>
+		
+	<hr>
+	
+	<form action="/person" method="POST">
+		<input type="text" name="name" th:value="${person.name}" /> <br>
+		<input type="text" name="age" th:value="${person.age}" />  <br>
+		<input type="submit" value="등록" /> 
+	</form>
+	
+</body>
+</html>
